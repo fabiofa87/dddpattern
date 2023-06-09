@@ -41,4 +41,15 @@ describe("Customer", () => {
       customer.activate();
     }).toThrowError("Address is required");
   });
+
+  it("should add reward points", () => {
+    const customer = new Customer("1", "John Doe");
+    expect(customer.rewardPoints).toBe(0);
+
+    customer.addRewardPoints(10);
+    expect(customer.rewardPoints).toBe(10);
+
+    customer.addRewardPoints(10);
+    expect(customer.rewardPoints).toBe(20);
+  });
 });
