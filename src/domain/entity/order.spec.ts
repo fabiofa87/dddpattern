@@ -38,4 +38,14 @@ describe("Order unit tests", () => {
       const order = new Order("1", "123", [item1, item2, item3]);
     }).toThrowError("Order items cannot be empty");
   });
+
+  it("should change items", () => {
+    const item1 = new OrderItem("1", "Item 1", 10, "1", 1);
+
+    const order = new Order("1", "123", [item1]);
+    const item2 = new OrderItem("2", "Item 2", 20, "2", 2);
+    order.changeItems([item2]);
+
+    expect(order.items).toStrictEqual([item2]);
+  });
 });

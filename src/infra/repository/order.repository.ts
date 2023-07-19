@@ -28,7 +28,7 @@ export default class OrderRepository implements OrderRepositoryInterface {
     await OrderModel.update(
       {
         customer_id: entity.customerId,
-        total: entity.total,
+        total: entity.total(),
         items: entity.items.map((item) => ({
           id: item.id,
           name: item.name,
