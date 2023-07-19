@@ -176,9 +176,7 @@ describe("Order repository test", () => {
     const customerRepository = new CustomerRepository();
     const customer = new Customer("123", "Customer 1");
     const address = new Address("Street 1", 1, "Zipcode 1", "City 1");
-
     customer.changeAddress(address);
-
     await customerRepository.create(customer);
 
     const productRepository = new ProductRepository();
@@ -198,8 +196,9 @@ describe("Order repository test", () => {
     const orderRepository = new OrderRepository();
     await orderRepository.create(order);
 
-    const orderModel = await OrderModel.findAll();
+    const orderResults = await orderRepository.findAll();
 
-    expect(orderModel.length).toBe(1);
+    expect(orderResults.length).toBe(1);
+    expect(orderResults).toContainEqual(order);
   });
 });
