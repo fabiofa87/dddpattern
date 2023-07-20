@@ -4,6 +4,6 @@ export default class SendEmailWhenProductIsCreatedHandler
   implements EventHandlerInterface
 {
   handle(event: any): void {
-    throw new Error("Method not implemented.");
+    console.log(`Send email when product is created: ${event}`);
   }
 }
