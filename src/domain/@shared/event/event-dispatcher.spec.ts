@@ -1,4 +1,4 @@
-import Address from "../../entity/address";
+import Address from "../../customer/value-object/address";
 import Customer from "../../entity/customer";
 import CustomerChangedAddressEvent from "./customer/customer-changed-address.event";
 import CustomerCreatedEvent from "./customer/customer-created.event";

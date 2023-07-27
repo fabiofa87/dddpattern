@@ -1,5 +1,5 @@
-import EventHandlerInterface from "../../event-handler.interface";
-import EventInterface from "../../event.interface";
+import EventHandlerInterface from "../../../@shared/event/event-handler.interface";
+import EventInterface from "../../../@shared/event/event.interface";
 import CustomerChangedAddressEvent from "../customer-changed-address.event";
 
 export default class SendEmailWhenCustomerChangeItsAddress

@@ -1,5 +1,5 @@
 import EventHandlerInterface from "../../event-handler.interface";
-import CustomerCreatedEvent from "../customer-created.event";
+import CustomerCreatedEvent from "../../../../customer/event/customer-created.event";
 
 export default class SendSecondEmailWhenCustomerIsCreated
   implements EventHandlerInterface
