@@ -1,13 +1,13 @@
+import Customer from "../../customer/entity/customer";
+import CustomerChangedAddressEvent from "../../customer/event/customer-changed-address.event";
+import CustomerCreatedEvent from "../../customer/event/customer-created.event";
+import SendEmailWhenCustomerChangeItsAddress from "../../customer/event/handler/send-email-when-customer-change-its-address.handler";
+import SendEmailWhenCustomerIsCreatedHandler from "../../customer/event/handler/send-first-email-when-customer-is-created.handler";
+import SendSecondEmailWhenCustomerIsCreated from "../../customer/event/handler/send-second-email-when-customer-is-created.event";
 import Address from "../../customer/value-object/address";
-import Customer from "../../entity/customer";
-import CustomerChangedAddressEvent from "./customer/customer-changed-address.event";
-import CustomerCreatedEvent from "./customer/customer-created.event";
-import SendEmailWhenCustomerChangeItsAddress from "./customer/handler/send-email-when-customer-change-its-address.handler";
-import SendEmailWhenCustomerIsCreatedHandler from "./customer/handler/send-first-email-when-customer-is-created.handler";
-import SendSecondEmailWhenCustomerIsCreated from "./customer/handler/send-second-email-when-customer-is-created.event";
+import SendEmailWhenProductIsCreatedHandler from "../../product/event/handler/send-email-when-product-is-created.handler";
+import ProductCreatedEvent from "../../product/event/product-created.event";
 import EventDispatcher from "./event-dispatcher";
-import SendEmailWhenProductIsCreatedHandler from "./product/handler/send-email-when-product-is-created.handler";
-import ProductCreatedEvent from "./product/product-created.event";
 
 describe("Domain events tests", () => {
   it("should register an event handler", () => {
